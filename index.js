@@ -234,23 +234,7 @@ function cadastrarProduto(req, resp) {
             `);
         }
     }
-    if (validade <= fabricacao){
-        resp.write(`
-            <div>
-                <span><p class="bg-danger">A Data de validade não pode ser menor ou igual à data de fabricação</p></span>
-            </div>
-        `);
-
-    }
-    if (datacompra >= validade){
-        resp.write(`
-            <div>
-                <span><p class="bg-danger">O produto está vencido.</p></span>
-            </div>
-        `);
-
-    }
-
+    
     resp.end();
 
 
